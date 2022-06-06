@@ -1,12 +1,26 @@
 
 import './App.css';
 import Nav from "../src/components/Nav"
+import SongHeading from './components/SongHeading';
+import { Route, Switch } from "react-router-dom";
+
 function App() {
   return (
-    <div className="App">
-    <Nav/>
+    
+   
 
-  </div>
+    <Switch>
+      <Route exact path="/">
+        <Nav />
+        <SongHeading />
+       
+      </Route>
+     
+     
+    </Switch>
+
+
+  
 
     
   );
