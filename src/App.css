@@ -69,3 +69,58 @@
     color: white;
     text-decoration: none;
   }
+
+  #songsname{
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    background-color: white;
+  }
+
+  .Song-image{
+    width: 120px;
+    height: 80px;
+
+
+  }
+
+  #imgcontrol{
+    margin-left: 40px;
+  }
+  #song-control{
+    text-align: center;
+    padding-top: 25px;
+    border-left: 2px solid gray;
+  
+    /* margin: auto; */
+    width: 200px;
+  }
+
+
+  .starstyle{
+    width: 180px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+    margin-right: 50px;
+    border-left: 2px solid gray;
+  
+  }
+
+  .songCaption{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:10px;
+    background-color: #696969;
+  }
+
+  #caption{
+    width: 150px;
+    text-align: left;
+  }
+
+  #song-Division{
+    border: 2px solid gray;
+    margin: 0.5em 1em;
+  }
