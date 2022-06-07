@@ -156,8 +156,41 @@
     justify-content: space-around;
     line-height: 80px;
   }
-  #ai{
+
+/* artist detail */
+
+  #ai{         
     width: 450px;
     text-align: center;
     border-right: 2px solid gray;
+  }
+
+  .form-control{
+    margin: auto;
+    margin-top: 80px;
+    width: 50%;
+    border: 2px solid black;
+    justify-content: center;
+  }
+
+  .input-controls{
+    display: flex;
+    flex-direction: row;
+  }  
+
+  .name{
+    padding : 12px;
+    width: 200px;
+     }
+
+
+   .input-div{
+    padding: 10px;   
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input{
+     padding:8px;
   }

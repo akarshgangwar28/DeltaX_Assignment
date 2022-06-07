@@ -9,6 +9,7 @@ import img_1 from "./images/img_1.jpeg";
 
 import SubHeading1 from './components/SubHeading1';
 import Singer from "./components/Singer";
+import AddNewSong from './AddnewSongForm';
 
 
 function App() {
@@ -62,6 +63,11 @@ function App() {
 
           </div>
        
+      </Route>
+
+      <Route exact path="/AddNewSong">
+        <AddNewSong/>
+        
       </Route>
      
      
