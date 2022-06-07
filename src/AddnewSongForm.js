@@ -1,6 +1,21 @@
 import { useState } from "react";
 import Multiselect from 'multiselect-react-dropdown';
+import { Link } from "react-router-dom";
+import Popup from "./components/popup"
+
+
 function AddNewSong() {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+  const openPop = (e) => {
+    console.log("clicked")
+    e.preventDefault();
+    setIsOpen(!isOpen);
+  };
+
+
+
   const[artist,setArtist] = useState([
     "Arijit Singh",
     "Alka Yagnik",
@@ -9,6 +24,44 @@ function AddNewSong() {
     "Pawandeep Rajan",
   ])
   return (
+    <>
+    {isOpen && (
+            <Popup
+              content={
+                <>
+                  <form class="popup-form-control">
+                    <h1 style={{ marginLeft: "10px" }}>Add Artist</h1>
+                    <div className="input-controls">
+                      <div className="input-names">
+                        <div className="name">Artist Name</div>
+                        <div className="name">Date of Birth</div>
+                        <div className="name">Bio</div>
+                      </div>
+                      <div className="input-div">
+                        <div className="input">
+                          <input type="text"></input>
+                        </div>
+                        <div className="input">
+                          <input type="date"></input>
+                        </div>
+                        <div className="input">
+                          <textarea></textarea>
+                        </div>
+                        <div className="input">
+                          <button onClick={openPop}>Cancel</button>
+                          <button>Done</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </>
+              }
+              handleClose={openPop}
+            />
+          )}
+
+
+
     <form className="form-control">
       <h1 style={{ marginLeft: "10px" }}>Adding a new Song</h1>
       <div className="input-controls">
@@ -37,15 +90,21 @@ function AddNewSong() {
               showCheckbox
             />
 
-            <button> + Add Artist</button>
+            <button onClick={openPop}> + Add Artist</button>
           </div>
-          <div className="input">
-            <button>Save</button>
-            <button>Cancel</button>
+          <div className="input-btn">
+            <button type="submit">Save</button>
+            <div className="cancel-btn">
+              <Link to="/" id="cancel-btn-color">Cancel</Link>
+            </div>
           </div>
         </div>
       </div>
     </form>
+    </>
   );
 }
 export default AddNewSong;
+
+
+
