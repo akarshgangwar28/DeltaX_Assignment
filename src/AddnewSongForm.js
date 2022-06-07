@@ -169,11 +169,7 @@ function AddNewSong() {
       )}
       <form
         className="form-control"
-        // onSubmit={(event) => {
-        //   // console.log("rge");
-        //   event.preventDefault();
-        //   setSubmitting(true);
-        // }}
+      
         onSubmit={(event) => {
           event.preventDefault();
           console.log(data);
@@ -237,15 +233,18 @@ function AddNewSong() {
                 // onBlur={handleBlur}
                 // value={data.artists}
               />
-              {touched.artists && (
-                <div className="input errorMessage">{artistsError}</div>
-              )}
 
-              <button onClick={openPop} className="add-art-button">
+<button onClick={openPop} className="add-art-button">
                 {" "}
                 + Add Artist
               </button>
             </div>
+
+              {touched.artists && (
+                <div className="input errorMessage">{artistsError}</div>
+              )}
+
+             
             <div className="input-btn">
               <button>Save</button>
               <div className="cancel-btn">
