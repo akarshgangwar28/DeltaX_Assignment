@@ -124,3 +124,40 @@
     border: 2px solid gray;
     margin: 0.5em 1em;
   }
+
+  #artistHeading{
+    padding-left: 20px;
+    margin-top: 80px;
+    font-size: x-large;
+    border-bottom: 2px solid gray;
+  }
+  #artist-Division{
+    border: 2px solid gray;
+    margin: 0.5em 1em;
+  }
+
+  #artist-caption{
+    width: 150px;
+    text-align: left;
+  }
+
+/* Artist heading */
+
+  .subhead{   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:10px;
+    background-color: #696969;
+  }
+
+  #artistinfo{
+    display: flex;
+    justify-content: space-around;
+    line-height: 80px;
+  }
+  #ai{
+    width: 450px;
+    text-align: center;
+    border-right: 2px solid gray;
+  }
