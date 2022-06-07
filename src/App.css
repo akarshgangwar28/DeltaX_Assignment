@@ -269,3 +269,8 @@
   border: 1px solid #999;
   font-size: 20px;
 }
+
+.errorMessage {
+  color: red;
+  font-size: 0.7rem;
+}
